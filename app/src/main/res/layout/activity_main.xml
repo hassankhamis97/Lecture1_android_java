@@ -7,9 +7,9 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/left_text_view"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:id="@+id/top_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:background="#F00"
         android:text="1"
         android:textSize="20sp"
@@ -17,38 +17,38 @@
         android:textColor="@color/white"
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintWidth_percent="0.3333"/>
+        app:layout_constraintHeight_percent="0.3333"/>
 
     <TextView
         android:id="@+id/center_text_view"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:background="#0F0"
-        android:text="1"
+        android:text="2"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:gravity="center"
-        app:layout_constraintStart_toEndOf="@id/left_text_view"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintWidth_percent="0.3333"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_text_view"
+        app:layout_constraintHeight_percent="0.3333"/>
 
     <TextView
-        android:id="@+id/right_text_view"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:id="@+id/bottom_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:background="#00F"
-        android:text="1"
+        android:text="3"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:gravity="center"
-        app:layout_constraintStart_toEndOf="@id/center_text_view"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintWidth_percent="0.3333"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/center_text_view"
+        app:layout_constraintHeight_percent="0.3333"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
