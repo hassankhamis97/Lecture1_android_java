@@ -7,9 +7,9 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/top_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:id="@+id/first_text_view"
+        android:layout_width="0dp"
+        android:layout_height="380dp"
         android:background="#F00"
         android:text="1"
         android:textSize="20sp"
@@ -17,29 +17,35 @@
         android:textColor="@color/white"
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHeight_percent="0.3333"/>
+        app:layout_constraintEnd_toStartOf="@id/two_text_view"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/center_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:id="@+id/two_text_view"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
         android:background="#0F0"
         android:text="2"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:gravity="center"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/first_text_view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/top_text_view"
+        app:layout_constraintTop_toTopOf="@id/first_text_view"
         app:layout_constraintHeight_percent="0.3333"/>
 
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="first_text_view, two_text_view"/>
+
     <TextView
-        android:id="@+id/bottom_text_view"
+        android:id="@+id/third_text_view"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="200dp"
         android:background="#00F"
         android:text="3"
         android:textSize="20sp"
@@ -48,7 +54,6 @@
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/center_text_view"
-        app:layout_constraintHeight_percent="0.3333"/>
+        app:layout_constraintTop_toBottomOf="@id/barrier"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
