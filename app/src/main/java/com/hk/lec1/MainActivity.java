@@ -29,6 +29,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(TAG, "onRestart: ");
+    }
+
+    @Override
     protected void onPause() {
         super.onPause();
         Log.d(TAG, "onPause: ");
